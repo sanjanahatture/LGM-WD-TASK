@@ -1,74 +1,230 @@
-*{
-    background-color: powderblue;
-}
-#no1 {
-    padding: 2px;
-    gap: 2rem;  
-}
-#no1 h1 {
-    text-align: center;
-    margin-top: 40px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-
-#tt{
-    border: solid;
-    /* background-image: url("./img/bg1.jpg") */
-    padding: 50px 80px ;
-    top: 30%;
-    margin-right:10%;
-    margin-left:5%;
-    position:absolute;
-    background-color:powderblue;
-    font-size:18px;
-    border-radius: 30%;
-    box-shadow:0 10px 5px rgb(0,0,0,0.5);
-}
-
-#hello{
-    padding: 50px 20px;
-    top: 30%;
-    margin-right: 0%;
-    margin-left: 45%;
-    position: absolute;
-    font-size: 18px;
-}
-#hello h1 {
-    
-    font-size: 28px;
-    background-color: #87858559;
-    padding: 3px;
-    text-align: center;
-}
-button{
-    border: none;
-}
-#tt h1 {
-     font-size: 28px;
-     padding: 3px;
-     text-align: center;
-     font-weight: 500;
-}
-body {
+* {
     margin: 0;
-    font-family: Courier;
-    background-size: 1200px 600px;
-    background-repeat: no-repeat;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-#tott {
-   padding: 10px;
-   justify-content: space-between;
-   display: flex;
-   
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(248, 248, 249);
+    background: #a0959e;
+
 }
-table td {
-    padding: 10px;
+
+h1 {
+    border:none;
+    text-align: center;
+    margin: 2rem 0;
+    color: #070707;
 }
-#vvv{
-    padding: 20px;
-    font-weight: 800;
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex-basis: 50%;
+    background-color: rgb(227 236 205 / 80%);
+    color: rgb(12, 12, 12);
+    border-radius: 1rem;
+    font-size: 14px;
+    justify-content: space-evenly;
+    margin-bottom: 5rem;
+}
+
+.form {
+    padding: 2rem;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(246, 237, 237, 0.7);
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="url"]{
+    padding-left: 3px;
+    background-color: transparent;
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding-right: 0;
+    margin-bottom: 25px;
+}
+.form input[type="url"]{
+    width:100%;
+
+}
+
+
+.website input[type='url']{
+    width:100%;
+}
+
+
+
+
+.form input{
+    color: #0a0a0a;
+}
+
+
+.image {
+    margin-top: 25px;
+    border: 1px solid #070707;
+}
+
+
+.form button {
+    width:135px;
+    height:35px;
+    padding: 0.4rem 0;
+    background-color: #b4c884;
+    border-radius: 0.3rem;
+    border: none;
+    outline: none;
+    margin-right: 1rem;
+    margin-top: 0.6rem;
+}
+.form button:hover{
+    color: #650396;
+    cursor: pointer;
+    border: 1px solid #650396;
+    background-color:#070707;
+}
+
+
+.form input {
+    border: 1px solid #efecec;
+    border: none;
+    border-bottom: 1px solid #650396;
+    margin: 0.7rem;
+}
+
+.form input:hover {
+    border:none;
+    background-color: transparent;
+    border-bottom:1px solid #02f897;
+}
+
+
+.skills{
+    margin-top:12px;
+    margin-bottom:10px;
+}
+
+.output {
+    width: 50%;
+    /* background-color: aqua; */
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+h2 {
+    text-align: center;
+    font-size:25px;
+    letter-spacing:1px;
+    margin-bottom: 1rem;
+}
+
+.output .cardContainer {
+    height: 90%;
+    overflow-y: auto;
+    /* background-color: aqua; */
+}
+
+.output .card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 0.3rem 0;
+    word-wrap: break-word;
+    line-break: strict;
+}
+
+.card img {
     
+    border-color: #070707;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    width: 130px;
+    height: 150px;
 }
-#show{
-    border: solid;
+
+.card .info {
+    text-align: left;
+}
+
+
+.card .info button {
+    padding: 2px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #b4c884;
+    bottom: unset;
+    outline: none;
+
+}
+.card .info button:hover{
+    color: #650396;
+    cursor: pointer;
+    border: 1px solid #650396;
+    background-color:#070707;
+}
+
+
+
+@media (max-width:1200px) {
+
+    .container {
+        height: 90vh;
+        margin-bottom: 5rem;
+    }
+
+    .cardContainer {
+        height: 70%;
+        overflow-y: auto;
+    }
+
+    .output .card {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width:900px) {
+    .container {
+        flex-basis: auto;
+        display: block;
+        width: 90%;
+        height: auto;
+    }
+
+    .form {
+        width: 100%;
+        height: auto;
+    }
+
+    .output {
+        width: 100%;
+        margin: 5rem auto;
+    }
+
+    .output .cardContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 241px));
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
 }
